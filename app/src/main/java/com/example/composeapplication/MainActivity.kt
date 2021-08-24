@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -20,7 +22,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -38,6 +39,15 @@ class MainActivity : ComponentActivity() {
     }
 
     data class Message(val author: String, val body: String)
+
+    @Composable
+    fun Conversation(messages: List<Message>) {
+        LazyColumn {
+            items(messages) { message ->
+                MessageCard(message)
+            }
+        }
+    }
 
     @Composable
     fun MessageCard(message: Message) {
@@ -69,7 +79,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Preview(name = "Light Mode")
     @Preview(
         uiMode = Configuration.UI_MODE_NIGHT_YES,
         showBackground = true,
@@ -78,7 +87,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun PreviewMessageCard() {
         ComposeApplicationTheme {
-            MessageCard(Message("Dima", "Hello world"))
+            Conversation(SampleData.conversationSample)
         }
     }
 }

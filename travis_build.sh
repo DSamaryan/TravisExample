@@ -1,2 +1,1 @@
-set -xe
-echo 'First commit v2'
+echo 'Remove set xe'

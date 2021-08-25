@@ -1,2 +1,2 @@
 set -xe
-echo 'First sh commit'
+echo 'First commit v2'

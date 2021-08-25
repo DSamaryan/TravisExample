@@ -1,1 +1,1 @@
-echo 'Remove set xe'
+echo 'Create a branch and set tag for the last commit'

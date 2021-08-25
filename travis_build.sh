@@ -1,2 +1,2 @@
 set -xe
-echo 'First commit v2'
+echo 'Add pattern to travis config'

@@ -4,7 +4,9 @@ branches:
   only:
     - development
     - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
-tag: true
+    - /^build[\-].*$/
+on:
+  tag: true
 jobs:
   include:
     - stage: travis

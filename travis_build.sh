@@ -1,1 +1,1 @@
-echo 'Remove set xe'
+echo 'Tag is enabled but the last build was ran without this setting enabled'

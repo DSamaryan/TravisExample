@@ -3,8 +3,7 @@ dist: trusty
 branches:
   only:
     - development
-    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
-tag: true
+#    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 jobs:
   include:
     - stage: travis

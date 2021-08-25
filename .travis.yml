@@ -11,4 +11,4 @@ jobs:
   include:
     - stage: travis
       name: travis_test
-      script: ./travis_build.sh
+      script: bash travis_build.sh
